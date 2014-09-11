@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/src_pic"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="matrix" />
+
+    <com.example.clipview.view.ClipView
+        android:id="@+id/clipview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" 
+        android:layout_marginBottom="80dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <Button
+                android:id="@+id/bt_roate_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bt_roate_left"
+                android:layout_marginRight="30dp" />
+
+            <Button
+                android:id="@+id/bt_roate_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				android:text="bt_roate_right"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
