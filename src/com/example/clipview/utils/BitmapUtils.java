@@ -205,9 +205,6 @@ public class BitmapUtils {
 
             ColorMatrix mSaturationMatrix = new ColorMatrix();
             mSaturationMatrix.reset(); // 设为默认值
-            // mLightnessMatrix.setRotate(0, 100); // 控制让红色区在色轮上旋转的角度
-            // mLightnessMatrix.setRotate(1, 100); // 控制让绿红色区在色轮上旋转的角度
-            // mLightnessMatrix.setRotate(2, 100); // 控制让蓝色区在色轮上旋转的角度
             mSaturationMatrix.setSaturation(1.3f);
 
             Paint paint = new Paint(Paint.FILTER_BITMAP_FLAG);
@@ -227,9 +224,6 @@ public class BitmapUtils {
                 }
             }
             canvas.drawBitmap(bmp, x, y, paint);
-            // ExifInterface exif = new ExifInterface(filePath);
-            // int orientation = exif.getAttributeInt(
-            // ExifInterface.TAG_ORIENTATION, 0);
             Matrix matrix = getMatrix(orientation);
             scaledBitmap = Bitmap.createBitmap(scaledBitmap, 0, 0, scaledBitmap.getWidth(), scaledBitmap.getHeight(), matrix, true);
 
